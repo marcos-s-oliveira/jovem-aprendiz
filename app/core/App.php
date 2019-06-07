@@ -8,13 +8,15 @@
 
 class App{
     function __construct(){
-        if(!isset($_SESSION['id'])) {
-            require_once(controllers . 'Login.php');
-            $login = new Login;
-        }
+
 
         $url = $this->parseUrl($_GET['url']);
-
+        if(!isset($_SESSION['id'])) {
+            if($url[0] != "cadastro") {
+                require_once(controllers . 'Login.php');
+                $login = new Login;
+            }
+        }
         $this->controller = $url[0];
         if (file_exists("app/controllers/" . $this->controller . ".php")) {
             require_once "app/controllers/" . $this->controller . ".php";

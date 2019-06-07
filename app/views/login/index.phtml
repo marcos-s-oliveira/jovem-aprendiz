@@ -2,10 +2,11 @@
 <div class="container-login">
     <center>
         <img  width="100px" src="https://www.figueirao.ms.gov.br/wp-content/uploads/2017/05/brasao-figueirao1.png">
-        <div class="login-form">
+        <div class="login-window">
             <div class="header-login">
                 <h2>Fazer Login</h2>
             </div>
+            <div class="login-form">
             <form method="post">
                 <label for="email">e-Mail</label>
                 <input type="email" id="email" name="email" class="form-control" required autofocus><br>
@@ -15,7 +16,8 @@
             </form>
             <div id="login-msg" class="login-msg"></div>
             <a href="#">Esqueci minha senha</a><br>
-            <a href="#">Fazer meu cadastro</a>
+            <a href="#" onclick="popup('cadastro');">Fazer meu cadastro</a>
+        </div>
         </div>
     </center>
 

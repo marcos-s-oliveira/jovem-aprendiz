@@ -11,7 +11,8 @@ class Home{
 
         require_once (classes."usuario.php");
         $usuario = new usuario($_SESSION['id']);
-        echo 'bem-vindo '.$usuario->nome.'<a href="'.base.'Login/sair">sair</a>';
-        //require_once (views.)
+
+        require_once (views."template/theme-header.phtml");
+        require_once (views."template/nav.phtml");
     }
 }

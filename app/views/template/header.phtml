@@ -22,13 +22,22 @@ Code By @MarcosOliveira
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="<?php echo base;?>js/jquery.mask.min.js"></script>
         <script type="text/javascript">
-
+            function senhaLength(value, id){
+            if(value.length < 8){
+                document.getElementById(id).className="form-control is-invalid";
+                document.getElementById('msg_senha').innerHTML = "<p class=\"badge badge-danger\">Senha muito curta</p>";
+            }else if(value.length > 8){
+                document.getElementById(id).className="form-control is-valid";
+                document.getElementById('msg_senha').innerHTML = "<p class=\"badge badge-success\">Senha aceitável</p>";
+            }
+            }
               //formatação numeros
                 $(document).ready(function(){
                     $("#cnpj").mask("00.000.000/0000-00");
                     $("#cpf").mask("000.000.000-00");
                     $("#tel").mask("(00) 0000-0000");
                     $("#cel").mask("(00) 0 0000-0000");
+                    $("#cep").mask("00.000-000");
                 });
 
             //valiadação tipo de cadastro
@@ -157,35 +166,11 @@ Code By @MarcosOliveira
             window.print();
             window.close();
         }
-        function retroativo(data) {
-            let date = new Date();
-            date.setDate(date.getDate() + 30);
-            let  hoje = date.getFullYear()+"-0"+date.getMonth()+"-0"+date.getDay();
-            if (Date.parse(data) <= Date.parse(hoje)){
-                let confirma = confirm("Confirma o uso de data retoativa?\n Sua solicitação pode não ser atendida.");
-
-                if(confirma) {
-                    document.getElementById('msg_retroativo').innerText="Solicitção com data retroativa."
-                }else{
-
-                    document.getElementById('inicio').value = "0-0-0";
-                }
+        function numFilter(num, id) {
+            if (isNaN(num)){
+                alert('Por Favor, insira um número');
+                document.getElementById(id).value='';
             }
-        }
-        function validaFim(data) {
-            let inicio = document.getElementById('inicio').value;
-            let dataInicio = Date.parse(inicio);
-            let fim = Date.parse(data);
-            if (fim < dataInicio){
-                alert("Data final menor que data inicial");
-                document.getElementById('fim').value = "0-0-0";
-            }
-        }
-        function carroProprio() {
-            document.getElementById('carro_proprio').innerHTML = "<br><label for=\"inicio\">Valor Unitário</label>\n" +
-                "                <input class=\"form-control mb-2 mr-sm-2\" type=\"number\" name=\"kmValor\" id=\"kmValor\" required value=\"2.50\">\n" +
-                "                <label for=\"fim\">Quantidade</label>\n" +
-                "                <input class=\"form-control mb-2 mr-sm-2\" type=\"number\" name=\"km\" id=\"km\" required>"
         }
         </script>
             
