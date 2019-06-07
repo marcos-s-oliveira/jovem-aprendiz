@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="952e2617-d178-4d33-8fa0-9d8350d4eaeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/cadastro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/forms/cadastro.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/template/nav.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/template/theme-header.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/login/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/template/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/template/header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/template/nav.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/template/nav.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/template/theme-header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/template/theme-header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/material-dashboard.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/material-dashboard.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/custom.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/template/theme-header.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="323">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -62,11 +57,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/template/nav.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+            <state relative-caret-position="357">
+              <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/material-dashboard.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24111">
+              <caret line="13" column="277257" selection-start-line="13" selection-start-column="277257" selection-end-line="13" selection-end-column="277257" />
+              <folding>
+                <element signature="e#53772#53975#2" expanded="true" />
+                <element signature="e#54197#54349#2" expanded="true" />
+                <element signature="e#54848#54997#2" expanded="true" />
+                <element signature="e#55300#55466#1" expanded="true" />
+                <element signature="e#63658#63901#2" expanded="true" />
+                <element signature="e#64726#64975#2" expanded="true" />
+                <element signature="e#88003#88196#2" expanded="true" />
+                <element signature="e#88242#88435#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -85,7 +108,11 @@
     <findStrings>
       <find>..</find>
       <find>../</find>
+      <find>#9c27b0;</find>
     </findStrings>
+    <replaceStrings>
+      <replace>#008080</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,17 +133,18 @@
         <option value="$PROJECT_DIR$/app/models/login.php" />
         <option value="$PROJECT_DIR$/app/controllers/Login.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/core/App.php" />
         <option value="$PROJECT_DIR$/app/controllers/cadastro.php" />
         <option value="$PROJECT_DIR$/app/views/forms/forms.phtml" />
         <option value="$PROJECT_DIR$/app/views/login/index.phtml" />
-        <option value="$PROJECT_DIR$/css/custom.css" />
         <option value="$PROJECT_DIR$/app/views/template/header.phtml" />
         <option value="$PROJECT_DIR$/app/views/forms/cadastro.phtml" />
         <option value="$PROJECT_DIR$/dashboard.html" />
-        <option value="$PROJECT_DIR$/app/views/template/theme-header.phtml" />
         <option value="$PROJECT_DIR$/app/controllers/Home.php" />
         <option value="$PROJECT_DIR$/app/views/template/nav.phtml" />
+        <option value="$PROJECT_DIR$/app/core/App.php" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
+        <option value="$PROJECT_DIR$/assets/css/material-dashboard.min.css" />
+        <option value="$PROJECT_DIR$/app/views/template/theme-header.phtml" />
       </list>
     </option>
   </component>
@@ -148,31 +176,20 @@
             <path>
               <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="material-dashboard.css" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -225,12 +242,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559914183867</updated>
-      <workItem from="1559914185283" duration="19210000" />
+      <workItem from="1559914185283" duration="19770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19210000" />
+    <option name="totallyTimeSpent" value="19770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1352" y="-8" width="1376" height="744" extended-state="6" />
@@ -407,13 +424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/login/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -421,31 +431,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/template/header.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/template/theme-header.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -461,10 +450,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/material-dashboard-rtl.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1683" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/template/nav.phtml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/material-dashboard.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24111">
+          <caret line="13" column="277257" selection-start-line="13" selection-start-column="277257" selection-end-line="13" selection-end-column="277257" />
+          <folding>
+            <element signature="e#53772#53975#2" expanded="true" />
+            <element signature="e#54197#54349#2" expanded="true" />
+            <element signature="e#54848#54997#2" expanded="true" />
+            <element signature="e#55300#55466#1" expanded="true" />
+            <element signature="e#63658#63901#2" expanded="true" />
+            <element signature="e#64726#64975#2" expanded="true" />
+            <element signature="e#88003#88196#2" expanded="true" />
+            <element signature="e#88242#88435#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/theme-header.phtml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
         </state>
       </provider>
     </entry>

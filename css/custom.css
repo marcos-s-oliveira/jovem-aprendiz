@@ -7,7 +7,7 @@ body{
 .container-login{
     padding-top: 5%;
     align-content: center !important;
-    background-color: teal;
+    background-color: #008080;
     height: 100%;
 }
 .login-window{
