@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+
+Versão 1.0.0 &copy; Divisão de Tecnologia da Informação e Eletrônica - Prefeitura Municipal de Figueirão
+Todos os direitos reservados
+Code By @MarcosOliveira
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitação de Diárias - Prefeitura Municipal de Figueirão</title>
+    <link rel="shortcut icon" href="https://www.figueirao.ms.gov.br/wp-content/uploads/2017/05/brasao-figueirao1.png">
+    <link rel="stylesheet" href="<?php echo base;?>css/custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="<?php echo base;?>js/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+
+        //formatação numeros
+        $(document).ready(function(){
+            $("#cnpj").mask("00.000.000/0000-00");
+            $("#cpf").mask("000.000.000-00");
+            $("#tel").mask("(00) 0000-0000");
+            $("#cel").mask("(00) 0 0000-0000");
+        });
+
+        //valiadação tipo de cadastro
+        function mudaTipo(value){
+            if(value == 1){
+                document.getElementById('cnpj').disabled=false;
+                document.getElementById('cnpj').required=true;
+                document.getElementById('cnpj').focus();
+                document.getElementById('cpf').required=false;
+                document.getElementById('divNome').innerHTML =
+                    "<td><label>Nome Fantasia</label><input type='text' name='fantasia' class='form-control' required></td><td colspan='2'><label>Razão Social</label><input type='text' name='social' class='form-control' required></td>";
+            }
+            else if(value == 2){
+                document.getElementById('cnpj').disabled=true;
+                document.getElementById('cnpj').value = null;
+                document.getElementById('cpf').disabled=false;
+                document.getElementById('cpf').focus();
+                document.getElementById('cpf').required=true;
+                document.getElementById('divNome').innerHTML =
+                    "<td colspan='3'><label>Nome</label><input type='text' name='social' class='form-control' required></td>";
+            }
+
+        }
+
+        function testaCpf(strCPF) {
+            console.log(strCPF);
+            var Soma;
+            var Resto;
+            Soma = 0;
+            if (strCPF == "00000000000"){
+
+                return false;
+            }
+            if (strCPF == "11111111111"){
+
+                return false;
+            }
+            if (strCPF == "22222222222"){
+
+                return false;
+            }
+            if (strCPF == "33333333333"){
+
+                return false;
+            }
+            if (strCPF == "44444444444"){
+
+                return false;
+            }
+            if (strCPF == "55555555555"){
+
+                return false;
+            }
+            if (strCPF == "66666666666"){
+
+                return false;
+            }
+            if (strCPF == "77777777777"){
+
+                return false;
+            }
+            if (strCPF == "88888888888"){
+
+                return false;
+            }
+            if (strCPF == "99999999999"){
+
+                return false;
+            }
+
+            for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+            Resto = (Soma * 10) % 11;
+
+            if ((Resto == 10) || (Resto == 11))  Resto = 0;
+            if (Resto != parseInt(strCPF.substring(9, 10)) ){
+
+                return false;
+            }
+
+            Soma = 0;
+            for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+            Resto = (Soma * 10) % 11;
+
+            if ((Resto == 10) || (Resto == 11))  Resto = 0;
+            if (Resto != parseInt(strCPF.substring(10, 11) ) ){
+
+                return false;
+            } else {
+                return true;
+            }
+
+
+        }
+        function validaCpf(str){
+            var intCpf = str.replace(/[^0-9]/g,'');
+            var msg = (testaCpf(intCpf));
+            if (msg == true) {
+                mudaTipo(str);
+                document.getElementById('cpf').className = "form-control is-valid";
+                document.getElementById('msg_cpf').innerHTML = "<p class=\"badge badge-success\">Cpf Válido</p>";
+                return true;
+            }else{
+                document.getElementById('cpf').className = "form-control is-invalid";
+                document.getElementById('msg_cpf').innerHTML = "<p class=\"badge badge-danger\">Cpf inválido</p>";
+                return false;
+            }
+            //document.getElementById('msg').innerHTML = "CPF Válido!";
+        }
+        function validaFormCpf(form){
+            if (validaCpf() == false) {
+                return false
+            }else{
+                document.getElementById(formUsuario).submit();
+            }
+        }
+
+
+        function classe(id){
+            document.getElementById(id).className="active";
+        }
+        function popup(pag){
+            console.log(pag);
+            window.open(pag, "nome", "width='100', height='100', left=\"50px\" scrollbars='1', location=no, directories=no, status=no, menubar=no, toolbar=no, resizable=false");
+        }
+        function printPage(){
+            window.print();
+            window.close();
+        }
+        function retroativo(data) {
+            let date = new Date();
+            date.setDate(date.getDate() + 30);
+            let  hoje = date.getFullYear()+"-0"+date.getMonth()+"-0"+date.getDay();
+            if (Date.parse(data) <= Date.parse(hoje)){
+                let confirma = confirm("Confirma o uso de data retoativa?\n Sua solicitação pode não ser atendida.");
+
+                if(confirma) {
+                    document.getElementById('msg_retroativo').innerText="Solicitção com data retroativa."
+                }else{
+
+                    document.getElementById('inicio').value = "0-0-0";
+                }
+            }
+        }
+        function validaFim(data) {
+            let inicio = document.getElementById('inicio').value;
+            let dataInicio = Date.parse(inicio);
+            let fim = Date.parse(data);
+            if (fim < dataInicio){
+                alert("Data final menor que data inicial");
+                document.getElementById('fim').value = "0-0-0";
+            }
+        }
+        function carroProprio() {
+            document.getElementById('carro_proprio').innerHTML = "<br><label for=\"inicio\">Valor Unitário</label>\n" +
+                "                <input class=\"form-control mb-2 mr-sm-2\" type=\"number\" name=\"kmValor\" id=\"kmValor\" required value=\"2.50\">\n" +
+                "                <label for=\"fim\">Quantidade</label>\n" +
+                "                <input class=\"form-control mb-2 mr-sm-2\" type=\"number\" name=\"km\" id=\"km\" required>"
+        }
+    </script>
+
+</head>
+<body>
