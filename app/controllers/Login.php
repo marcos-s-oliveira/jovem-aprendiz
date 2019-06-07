@@ -15,4 +15,14 @@ class Login{
         session_unset();
         header("location: ".base);
     }
+/*    public function processa(){
+        if (isset($_POST)){
+
+            $email = addslashes($_POST['email']);
+            $pass = addslashes(md5($_POST['pass']));
+            require_once (models."valida.php");
+            $valida = new valida($email, $pass);
+            unset($_POST);
+        }
+    }*/
 }

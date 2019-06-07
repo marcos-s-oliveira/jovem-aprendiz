@@ -24,7 +24,7 @@ class valida
                     document.getElementById(\"email\").disabled=true;
                     document.getElementById(\"pass\").disabled=true;
                 </script>";
-
+           // session_unset();
         } else {
             require_once(models . 'sql.php');
             $this->email = $email;
@@ -50,7 +50,7 @@ class valida
                 $usuario = new usuario($row['id']);
                 $_SESSION['tentativas'] = 0;
                 $_SESSION['id'] = $usuario->id;
-                header("location: ../../");
+                header("location: ".base);
             }
         }
 

@@ -25,10 +25,7 @@ define('classes', "app/classes/");
 define('config', "app/config/");
 session_start();
 
-    if(!isset($_SESSION['id'])){
-        require_once (controllers.'Login.php');
-        $login = new Login;
-    }else{
+
+
         require_once("app/core/App.php");
         $app = new App;
-    }
