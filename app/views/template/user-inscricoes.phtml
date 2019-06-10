@@ -1,0 +1,68 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Marcos
+ * Date: 10/06/2019
+ * Time: 07:36
+ */
+?>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title "><?php echo $usuario->nome;?></h4>
+            <p class="card-category">Inscrições</p>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class=" text-primary">
+                    <tr><th>
+                            Código
+                        </th>
+                        <th>
+                            Cargo
+                        </th>
+                        <th>
+                            Nível
+                        </th>
+                        <th>
+                            Carga Horária
+                        </th>
+                        <th>
+                            Vagas
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr></thead>
+                    <tbody>
+                    <?php
+                    $hoje = strtotime(date("Y-m-d"));
+                    $query = "SELECT * FROM inscritos WHERE usuarioId = '".$usuario->id."' ORDER BY id ASC";
+
+                    require_once (models."sql.php");
+                    require_once (classes."vaga.php");
+                    $sql = new sql;
+                    $result = $sql->select($query);
+                    if(mysqli_num_rows($result) >0){
+                        while($row = mysqli_fetch_assoc($result)){
+
+                            if(strtotime($row['inicio']) < $hoje || strtotime($row['fim']) > $hoje){
+                                $vaga = new vaga($row['id']);
+                                $vaga->mostraMinha();
+                            }
+
+                        }
+                    }
+                    else{
+                        echo "
+                    <tr><td colspan='6'>Nenhuma Inscrição.</td></tr>
+                    ";
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
