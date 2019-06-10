@@ -14,7 +14,7 @@ require_once (views."template/header-impressao.phtml");
 
 <center>
         <div class="container-fluid">
-        <button class="btn" onclick="print()"><i class="fas fa-print">
+        <button class="btn" onclick="printPage()"><i class="fas fa-print">
             </i>Imprimir</button>
 
         <img src="<?php echo base;?>assets/img/header_ofi.png" width="100%" alt="Cabeçalho">
@@ -84,7 +84,7 @@ require_once (views."template/header-impressao.phtml");
                     <th width="160px">
                         Inscrição Nº
                     </th>
-                    <th>
+                    <th colspan="4">
                         <?php echo $vaga->id."-".$inscricaoId;?>
                     </th>
                 </tr>
@@ -118,7 +118,7 @@ require_once (views."template/header-impressao.phtml");
                     <p>
                         Este comprovante deverá ser apresentado junto com os documentos exigidos no item
                         <b>6.3</b> do <a href="#">edital </a> na Gerência de Recursos Humanos, entre os dias<b>
-                        <?php echo $vaga->inscricoesInicio." e ".$vaga->inscricoesFim?></b>, no horário de expediente, (das 07:00 às 11:00 horas e das 13:00 ás 17:00 horas).
+                        <?php echo $vaga->entrevistaInicio." e ".$vaga->entrevistaFim?></b>, no horário de expediente.
                     </p>
                 </div>
 

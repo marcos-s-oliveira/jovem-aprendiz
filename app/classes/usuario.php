@@ -25,11 +25,12 @@ class usuario{
         $sql = new sql;
         $result = $sql->select($query);
         $row = mysqli_fetch_assoc($result);
+        $this->id = $id;
         $this->nome = $row['nome'];
         $this->email = $row['email'];
         $this->telefone = $row['cel'];
         $this->cpf = $row['cpf'];
-        $this->endereco = $row['logradouro'].", ".$row['numero']." ".$row['bairo']." - ".$row['municipio']." ".$row['uf'];
+        $this->endereco = $row['logradouro'].", ".$row['numero']." ".$row['bairro']." - ".$row['municipio']." ".$row['uf'];
     }
 
 

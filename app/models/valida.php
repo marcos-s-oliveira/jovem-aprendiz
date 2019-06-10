@@ -16,15 +16,15 @@ class valida
      * @param $email
      * @param $senha
      */
-    public function __construct($email, $senha)
-    {
+    public function __construct($email, $senha){
+
         if ($_SESSION['tentativas'] > 3) {
             echo "<script type=\"text/javascript\">
                     document.getElementById(\"login-msg\").innerHTML='<p>Número de tentativas excedido!</p>';
                     document.getElementById(\"email\").disabled=true;
                     document.getElementById(\"pass\").disabled=true;
                 </script>";
-           // session_unset();
+            //session_unset();
         } else {
             require_once(models . 'sql.php');
             $this->email = $email;
@@ -45,12 +45,16 @@ class valida
                 </script>
                 <?php
             } else {
+
                 $row = mysqli_fetch_assoc($result);
-                require_once (classes."usuario.php");
-                $usuario = new usuario($row['id']);
+
                 $_SESSION['tentativas'] = 0;
-                $_SESSION['id'] = $usuario->id;
-                header("location: ".base);
+                $_SESSION['id'] = $row['id'];
+                echo "
+                <script type='text/javascript'>
+                window.location.replace(\"".base."\")
+                </script>
+                ";
             }
         }
 

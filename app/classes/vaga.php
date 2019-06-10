@@ -14,6 +14,8 @@ class vaga{
     public $vagas;
     public $inscricoesInicio;
     public $inscricoesFim;
+    public $entrevistaInicio;
+    public $entrevistaFim;
     public $edital;
     public $empregador;
 
@@ -30,9 +32,45 @@ class vaga{
         $this->nivel = $row['nivel'];
         $this->carga = $row['carga'];
         $this->vagas = $row['vagas'];
-        $this->inscricoesInicio = $data->convert($row['inicio']);
-        $this->inscricoesFim = $data->convert($row['fim']);
+        $this->entrevistaInicio = $data->convert($row['entrevistaInicio']);
+        $this->entrevistaFim = $data->convert($row['entrevistaFim']);
         $this->edital = $row['edital'];
         $this->empregador = $row['empregadorId'];
+    }
+    public function mostraLinha(){
+        if(!isset($this->edital)){
+            $detalhe = "detalhe/vaga/".$this->id;
+        }else{
+            $detalhe = $this->edital;
+        }
+        echo "
+        <tr>
+        <td>
+        ".$this->id."
+        </td>
+        <td>
+        ".$this->cargo."
+        </td>
+        <td>
+        ".$this->nivel."
+        </td>
+        <td>
+        ".$this->carga."
+        </td>
+        <td class=\"text-primary\">
+        ".$this->vagas."
+        </td><td>
+            <a href=\"#\" onclick=\"popup('".$detalhe."')\" data-title=\"Saiba Mais\">
+                <i class=\"material-icons\">
+        open_in_new
+                </i>
+            </a>
+            <a href=\"#\" onclick=\"popup('inscrever/vaga/".$this->id."')\" data-title=\"Inscever-se\">
+                <i class=\"material-icons\">
+        how_to_reg
+                </i>
+            </a>
+        </td>
+    </tr>";
     }
 }

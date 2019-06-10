@@ -1,7 +1,7 @@
 
-<body class="">
+<body class="" onload="load()">
 <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="<?php echo base;?>assets/img/sidebar-1.jpg">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -14,26 +14,26 @@
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="nav-item active">
+                <li id="dashboard" class="nav-item">
                     <a class="nav-link" href="<?php echo base;?>">
                         <i class="material-icons">dashboard</i>
                         <p>Página Inicial</p>
                     </a>
                 </li>
-                <li class="nav-item ">
+                <li id="perfil/ver" class="nav-item ">
                     <a class="nav-link" href="<?php echo base;?>perfil/ver">
                         <i class="material-icons">person</i>
                         <p>Meu Perfil</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="<?php echo base;?>usuario/inscricoes">
+                <li id="user/inscricoes" class="nav-item ">
+                    <a class="nav-link" href="<?php echo base;?>user/inscricoes">
                         <i class="material-icons">content_paste</i>
-                        <p>Table List</p>
+                        <p>Minhas Inscrições</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="<?php echo base;?>usuario/curriculo">
+                <li id="user/curriculo" class="nav-item ">
+                    <a class="nav-link" href="<?php echo base;?>user/curriculo">
                         <i class="material-icons">library_books</i>
                         <p>Meu Currículo</p>
                     </a>

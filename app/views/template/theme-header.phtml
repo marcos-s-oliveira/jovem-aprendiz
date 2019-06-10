@@ -5,7 +5,20 @@
  * Date: 07/06/2019
  * Time: 16:38
  */
+
+if (!isset($_SESSION['id'])) {
+
+    if ($url[0] != "cadastro") {
+        header("location: ".base."Login/entrar");
+        /*require_once(controllers . 'Login.php');
+        $login = new Login;*/
+    }
+}
+require_once (classes."usuario.php");
+$usuario = new usuario($_SESSION['id']);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="PT-br">
 
@@ -20,10 +33,19 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
-    <link href="assets/css/material-dashboard.css" rel="stylesheet" />
+    <link href="<?php echo base;?>assets/css/material-dashboard.css" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="assets/demo/demo.css" rel="stylesheet" />
+    <link href="<?php echo base;?>assets/demo/demo.css" rel="stylesheet" />
     <script src="<?php echo base;?>js/jquery.mask.min.js"></script>
     <script src="<?php echo base;?>js/main.js"></script>
+    <script type="text/javascript">
+        function load() {
+            let aba = "<?php echo $_GET['url'];?>";
+            if (aba == ""){
+                aba = "dashboard";
+            }
+            document.getElementById(aba).className = "nav-item active"
+        }
+    </script>
 </head>
 

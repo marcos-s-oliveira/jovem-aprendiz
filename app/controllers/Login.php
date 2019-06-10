@@ -7,7 +7,7 @@
  */
 
 class Login{
-    public function __construct(){
+    public function entrar(){
         require_once (views.'template/header.phtml');
         require_once (views.'login/index.phtml');
     }
@@ -15,14 +15,14 @@ class Login{
         session_unset();
         header("location: ".base);
     }
-/*    public function processa(){
+    public function processa(){
         if (isset($_POST)){
-
+            die(print_r($_POST));
             $email = addslashes($_POST['email']);
             $pass = addslashes(md5($_POST['pass']));
             require_once (models."valida.php");
             $valida = new valida($email, $pass);
             unset($_POST);
         }
-    }*/
+    }
 }

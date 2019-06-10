@@ -36,35 +36,30 @@
                         </th>
                     </tr></thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            Jovem Aprendiz
-                        </td>
-                        <td>
-                            Estudante
-                        </td>
-                        <td>
-                            20
-                        </td>
-                        <td class="text-primary">
-                            CR
-                        </td><td>
-                            <a href="#" onclick="popup('detalhe/vaga/1')" data-title="Saiba Mais">
-                                <i class="material-icons">
-                                    open_in_new
-                                </i>
-                            </a>
-                            <a href="#" onclick="popup('inscrever/vaga/1')" data-title="Inscever-se">
-                                <i class="material-icons">
-                                    how_to_reg
-                                </i>
-                            </a>
-                        </td>
-                    </tr>
+                <?php
+                $hoje = strtotime(date("Y-m-d"));
+                $query = "SELECT * FROM vagas WHERE ativo = 1 ORDER BY id ASC";
 
+                require_once (models."sql.php");
+                require_once (classes."vaga.php");
+                $sql = new sql;
+                $result = $sql->select($query);
+                if(mysqli_num_rows($result) >0){
+                    while($row = mysqli_fetch_assoc($result)){
+
+                        if(strtotime($row['inicio']) < $hoje || strtotime($row['fim']) > $hoje){
+                            $vaga = new vaga($row['id']);
+                            $vaga->mostraLinha();
+                        }
+
+                    }
+                }
+                else{
+                    echo "
+                    <tr><td colspan='6'>Nenhuma vaga aberta.</td></tr>
+                    ";
+                }
+                ?>
                     </tbody>
                 </table>
             </div>

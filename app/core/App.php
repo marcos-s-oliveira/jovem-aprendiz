@@ -13,12 +13,7 @@ class App
 
 
         $url = $this->parseUrl($_GET['url']);
-        if (!isset($_SESSION['id'])) {
-            if ($url[0] != "cadastro") {
-                require_once(controllers . 'Login.php');
-                $login = new Login;
-            }
-        }else{
+
 
         $this->controller = $url[0];
         if (file_exists("app/controllers/" . $this->controller . ".php")) {
@@ -37,14 +32,16 @@ class App
         $this->param = $url ? array_values($url) : [];
         call_user_func_array([$this->controller, $this->method], $this->param);
     }
-}
 
-    private function parseUrl($url){
-    $url = explode("/", filter_var(rtrim($url), FILTER_SANITIZE_URL));
-    if ($url[0] == "") {
-        $url = array(0 => "home", 1=> "index");
+
+    private function parseUrl($url)
+    {
+        $url = explode("/", filter_var(rtrim($url), FILTER_SANITIZE_URL));
+        if ($url[0] == "") {
+            $url = array(0 => "home", 1 => "index");
+        }
+
+        return $url;
+
     }
-
-    return $url;
-}
 }
