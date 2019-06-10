@@ -19,6 +19,7 @@ class App
                 $login = new Login;
             }
         }else{
+
         $this->controller = $url[0];
         if (file_exists("app/controllers/" . $this->controller . ".php")) {
             require_once "app/controllers/" . $this->controller . ".php";

@@ -14,5 +14,7 @@ class Home{
 
         require_once (views."template/theme-header.phtml");
         require_once (views."template/nav.phtml");
+        require_once (views."template/user-dashboard.phtml");
+        require_once (views."template/footer.phtml");
     }
 }

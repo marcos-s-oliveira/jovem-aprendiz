@@ -14,4 +14,14 @@ class sql{
         $select = mysqli_query($link, $query) or die(mysqli_error($link));
         return $select;
     }
+    public function insert($query){
+        require_once (config."db.php");
+        $db = new db;
+        $link = $db->link;
+        $select = mysqli_query($link, $query);
+        if(!$select){
+            $select = mysqli_errno($link)."";
+        }
+        return $select;
+    }
 }

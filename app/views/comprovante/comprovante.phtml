@@ -1,0 +1,124 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Marcos
+ * Date: 10/06/2019
+ * Time: 09:45
+ */
+$inscricaoId = $row['id'];
+$usuario = new usuario($row['usuarioId']);
+$vaga = new vaga($row['vagaId']);
+$empregador = new Empregador($vaga->empregador);
+require_once (views."template/header-impressao.phtml");
+?>
+
+<center>
+        <div class="container-fluid">
+        <button class="btn" onclick="print()"><i class="fas fa-print">
+            </i>Imprimir</button>
+
+        <img src="<?php echo base;?>assets/img/header_ofi.png" width="100%" alt="Cabeçalho">
+            <h2>Comprovante de Inscrição</h2>
+                <h5> <?php echo $vaga->cargo;?></h5>
+            </div><br>
+</center>
+    <div class="container">
+        <label for="table">Dados do Candidato</label>
+    </div>
+<center>
+            <div class="container" style="border: 1px solid #66615b">
+
+                <table class="table">
+                <tbody class="table table-sm">
+
+                <tr>
+                    <th width="160px">
+                       Nome
+                    </th>
+                    <td>
+                        <?php echo $usuario->nome;?>
+                    </td>
+                    <th>
+                        CPF
+                    </th>
+                    <td>
+                        <?php echo $usuario->cpf;?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Telefone
+                    </th>
+                    <td>
+                        <?php echo $usuario->telefone;?>
+                    </td>
+                    <th>
+                        Email
+                    </th>
+                    <td>
+                        <?php echo $usuario->email;?>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Endereço
+                    </th>
+                    <td colspan="3">
+                        <?php echo $usuario->endereco;?>
+                    </td>
+                </tr>
+
+                </tbody>
+                </table>
+                <br>
+            </div>
+</center>
+<div class="container">
+    <label for="table">Dados da Inscrição</label>
+</div>
+<center>
+                <div class="container">
+                <table class="table">
+                <thead class="table table-dark">
+                <tr>
+                    <th width="160px">
+                        Inscrição Nº
+                    </th>
+                    <th>
+                        <?php echo $vaga->id."-".$inscricaoId;?>
+                    </th>
+                </tr>
+                </thead>
+                    <tbody>
+                    <tr>
+                        <th>
+                            Vagas
+                        </th>
+                        <td>
+                            <?php echo $vaga->vagas;?>
+                        </td>
+                        <th>
+                            Carga Horária
+                        </th>
+                        <td>
+                            <?php echo $vaga->carga;?>
+                        </td>
+                        <th>
+                            Empregador
+                        </th>
+                        <td>
+                            <?php echo $empregador->nome;?>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+    </center>
+                <div class="container">
+                    <p>
+                        Este comprovante deverá ser apresentado junto com os documentos exigidos no item
+                        <b>6.3</b> do <a href="#">edital </a> na Gerência de Recursos Humanos, entre os dias<b>
+                        <?php echo $vaga->inscricoesInicio." e ".$vaga->inscricoesFim?></b>, no horário de expediente, (das 07:00 às 11:00 horas e das 13:00 ás 17:00 horas).
+                    </p>
+                </div>
+

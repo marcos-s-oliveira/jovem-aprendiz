@@ -9,8 +9,10 @@
 class usuario{
     public $id;
     public $nome;
+    public $cpf;
     public $email;
-
+    public $telefone;
+    public $endereco;
     /**
      * usuario constructor.
      * @param $id
@@ -18,14 +20,16 @@ class usuario{
      * @param $email
      */
     public function __construct($id){
-        $this->id = $id;
-        $query = "SELECT nome, email FROM usuarios WHERE id = '".$this->id."' LIMIT 1";
+        $query = "SELECT * FROM usuarios WHERE id = '".$id."' LIMIT 1";
         require_once (models."sql.php");
         $sql = new sql;
         $result = $sql->select($query);
         $row = mysqli_fetch_assoc($result);
         $this->nome = $row['nome'];
         $this->email = $row['email'];
+        $this->telefone = $row['cel'];
+        $this->cpf = $row['cpf'];
+        $this->endereco = $row['logradouro'].", ".$row['numero']." ".$row['bairo']." - ".$row['municipio']." ".$row['uf'];
     }
 
 
