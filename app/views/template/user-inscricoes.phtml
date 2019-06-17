@@ -17,20 +17,18 @@
                 <table class="table">
                     <thead class=" text-primary">
                     <tr><th>
-                            Código
-                        </th>
-                        <th>
                             Cargo
                         </th>
                         <th>
-                            Nível
+                            Empregador
                         </th>
                         <th>
-                            Carga Horária
+                            Data da inscrição
                         </th>
                         <th>
-                            Vagas
+                            Imprimir Comprovante
                         </th>
+
                         <th>
 
                         </th>
@@ -46,11 +44,16 @@
                     $result = $sql->select($query);
                     if(mysqli_num_rows($result) >0){
                         while($row = mysqli_fetch_assoc($result)){
-
-                            if(strtotime($row['inicio']) < $hoje || strtotime($row['fim']) > $hoje){
-                                $vaga = new vaga($row['id']);
-                                $vaga->mostraMinha();
+                            $q = "SELECT * FROM vagas WHERE id = '".$row['vagaId']."'";
+                            $res = $sql->select($q);
+                            while ($linha = mysqli_fetch_assoc($res)){
+                                require_once(classes."Empregador.php");
+                                $empregador = new Empregador($linha['empregadorId']);
+                                echo "
+                            <tr><td>".$linha['cargo']."</td><td>$empregador->nome</td><td>".$row['created']."</td> <td><a href='#' onclick=\"popup('".base."Gerar/comprovante/".$row['id']."')\"> <i class=\"material-icons\">local_printshop</i></i></a> </td> </tr>
+                            ";
                             }
+
 
                         }
                     }

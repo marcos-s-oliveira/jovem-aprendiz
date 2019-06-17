@@ -17,8 +17,8 @@ if(isset($_POST['nome'])){
     $bairro = addslashes($_POST['bairro']);
     $cep = addslashes($_POST['cep']);
 
-    $query = "INSERT INTO `usuarios` (`nome`, `email`, `auth_pass`, `cpf`, `nascimento`, `cel`, `logradouro`, `numero`, `bairro`, `cep`)
-        VALUES ( '$nome', '$email', '$senha', '$cpf', '$nascimento', '$cel', '$logradouro', '$numero', '$bairro', '$cep')";
+    $query = "INSERT INTO `usuarios` (`nome`, `email`, `auth_pass`, `cpf`, `nascimento`, `cel`, `logradouro`, `numero`, `bairro`, `municipio`, `uf`, `cep`)
+        VALUES ( '$nome', '$email', '$senha', '$cpf', '$nascimento', '$cel', '$logradouro', '$numero', '$bairro', 'Figueirão', 'MS', '$cep')";
 
     require_once (models."sql.php");
     $sql = new sql;
