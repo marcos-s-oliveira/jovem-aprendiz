@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="952e2617-d178-4d33-8fa0-9d8350d4eaeb" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="952e2617-d178-4d33-8fa0-9d8350d4eaeb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/Enviar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/forms/curriculo.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/template/user-curriculo.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user.php" afterDir="false" />
+    </list>
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="136">
+              <caret line="13" column="62" lean-forward="true" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+=======
+            <state relative-caret-position="238">
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/template/user-curriculo.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="131" selection-start-line="16" selection-start-column="131" selection-end-line="16" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Enviar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/forms/curriculo.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/views/login/index.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/models/valida.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-308">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/controllers/Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/views/forms/cadastro.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-322" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/template/user-inscricoes.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="52" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>..</find>
+      <find>../</find>
+      <find>#9c27b0;</find>
+      <find>#9c27b0</find>
+      <find>linear-gradient(60deg, #ab47bc, #8e24aa);</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>#008080</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/.htaccess" />
+        <option value="$PROJECT_DIR$/css/.htaccess" />
+        <option value="$PROJECT_DIR$/js/.htaccess" />
+        <option value="$PROJECT_DIR$/app/views/404/index.html" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/app/models/login.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/controllers/cadastro.php" />
+        <option value="$PROJECT_DIR$/app/views/forms/forms.phtml" />
+        <option value="$PROJECT_DIR$/dashboard.html" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
+        <option value="$PROJECT_DIR$/assets/css/material-dashboard.min.css" />
+        <option value="$PROJECT_DIR$/assets/css/material-dashboard.css.map" />
+        <option value="$PROJECT_DIR$/app/views/template/footer.phtml" />
+        <option value="$PROJECT_DIR$/app/controllers/Home.php" />
+        <option value="$PROJECT_DIR$/assets/css/material-dashboard.css" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/assets/demo/demo.css" />
+        <option value="$PROJECT_DIR$/app/models/sql.php" />
+        <option value="$PROJECT_DIR$/app/controllers/gerar.php" />
+        <option value="$PROJECT_DIR$/app/views/comprovante/header.phtml" />
+        <option value="$PROJECT_DIR$/app/controllers/inscrever.php" />
+        <option value="$PROJECT_DIR$/app/config/db.php" />
+        <option value="$PROJECT_DIR$/app/classes/Empregador.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Gerar.php" />
+        <option value="$PROJECT_DIR$/app/models/data.php" />
+        <option value="$PROJECT_DIR$/app/core/App.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/app/views/template/header.phtml" />
+        <option value="$PROJECT_DIR$/app/models/valida.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Detalhe.php" />
+        <option value="$PROJECT_DIR$/app/views/tables/vagas-home.phtml" />
+        <option value="$PROJECT_DIR$/app/classes/usuario.php" />
+        <option value="$PROJECT_DIR$/app/views/comprovante/comprovante.phtml" />
+        <option value="$PROJECT_DIR$/app/classes/vaga.php" />
+        <option value="$PROJECT_DIR$/app/views/template/user-dashboard.phtml" />
+        <option value="$PROJECT_DIR$/app/controllers/usuario.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/views/template/theme-header.phtml" />
+        <option value="$PROJECT_DIR$/app/views/login/index.phtml" />
+        <option value="$PROJECT_DIR$/app/controllers/recuperar.php" />
+        <option value="$PROJECT_DIR$/app/views/forms/recuperar.phtml" />
+        <option value="$PROJECT_DIR$/app/views/forms/cadastro.phtml" />
+        <option value="$PROJECT_DIR$/app/views/template/nav.phtml" />
+        <option value="$PROJECT_DIR$/app/views/template/user-inscricoes.phtml" />
+        <option value="$PROJECT_DIR$/app/controllers/user.php" />
+        <option value="$PROJECT_DIR$/app/views/template/useer-curriculo.phtml" />
+        <option value="$PROJECT_DIR$/app/views/template/user-curriculo.phtml" />
+        <option value="$PROJECT_DIR$/app/controllers/Enviar.php" />
+        <option value="$PROJECT_DIR$/app/views/forms/curriculo.phtml" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="827" />
+    <option name="y" value="-8" />
+    <option name="width" value="1376" />
+    <option name="height" value="742" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+            </path>
+            <path>
+              <item name="jovem-aprendiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jovem-aprendiz" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\jovem-aprendiz\uploads\editais" />
+      <recent name="C:\xampp\htdocs\jovem-aprendiz" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="jovem-aprendiz" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.jovem-aprendiz" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="952e2617-d178-4d33-8fa0-9d8350d4eaeb" name="Default Changelist" comment="" />
+      <created>1559914183867</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559914183867</updated>
+      <workItem from="1559914185283" duration="45902000" />
+<<<<<<< HEAD
+      <workItem from="1560796745177" duration="5867000" />
+=======
+      <workItem from="1560796745177" duration="4509000" />
+      <workItem from="1562805925528" duration="140000" />
+      <workItem from="1562806254234" duration="3909000" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="jovem-aprendiz - 2019.06.17 at 14h 41m 39s.xml">
+      <configuration name="jovem-aprendiz" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="51769000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1352" y="-8" width="1376" height="744" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="54460000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26028278" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/404/index.html" />
+    <entry file="file://$PROJECT_DIR$/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/js/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/css/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/app/.htaccess" />
+    <entry file="file://$PROJECT_DIR$/app/models/login.php" />
+    <entry file="file://$PROJECT_DIR$/LICENSE" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/../acricam/app/views/layout/menu-icones.php" />
+    <entry file="file://$PROJECT_DIR$/assets/css/material-dashboard-rtl.css" />
+    <entry file="file://$PROJECT_DIR$/assets/css/material-dashboard.min.css" />
+    <entry file="file://$PROJECT_DIR$/assets/css/material-dashboard.css.map" />
+    <entry file="file://$PROJECT_DIR$/assets/scss/material-dashboard/bootstrap/scss/_card.scss" />
+    <entry file="file://$PROJECT_DIR$/css/custom.css" />
+    <entry file="file://$PROJECT_DIR$/assets/css/material-dashboard.css" />
+    <entry file="file://$PROJECT_DIR$/app/views/template/footer.phtml" />
+    <entry file="file://$PROJECT_DIR$/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/assets/demo/demo.css" />
+    <entry file="file://$PROJECT_DIR$/dashboard.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/comprovante/header.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/models/data.php" />
+    <entry file="file://$PROJECT_DIR$/app/models/sql.php" />
+    <entry file="file://$PROJECT_DIR$/app/core/App.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/template/header.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/Login.php" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/inscrever.php" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/Detalhe.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/template/header-impressao.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/classes/usuario.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/comprovante/comprovante.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/classes/vaga.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/tables/vagas-home.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/views/template/user-dashboard.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/Home.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/forms/recuperar.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/recuperar.php" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/cadastro.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/login/index.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/views/template/theme-header.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/views/template/nav.phtml" />
+    <entry file="file://$PROJECT_DIR$/app/classes/Empregador.php" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/Gerar.php" />
+    <entry file="file://$PROJECT_DIR$/app/config/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/user-inscricoes.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/user-curriculo.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="131" selection-start-line="16" selection-start-column="131" selection-end-line="16" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Enviar.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="291">
+          <caret line="58" column="60" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forms/recuperar.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="50" column="104" selection-start-line="50" selection-start-column="104" selection-end-line="50" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/recuperar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+=======
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forms/cadastro.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-322" />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/controllers/cadastro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/theme-header.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/nav.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/user-inscricoes.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="52" column="180" selection-start-line="52" selection-start-column="180" selection-end-line="52" selection-end-column="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/classes/Empregador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Gerar.php">
+=======
+    <entry file="file://$PROJECT_DIR$/app/models/valida.php">
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/views/login/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="62" lean-forward="true" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/views/forms/curriculo.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+>>>>>>> f2374f701a99fde60f624a4943b45f446e9a5b61
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
