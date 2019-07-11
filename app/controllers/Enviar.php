@@ -2,7 +2,7 @@
 
 
 class Enviar{
-    public function curriculo(){
+    public static function curriculo(){
         require_once(views."forms/curriculo.phtml");
     }
 }

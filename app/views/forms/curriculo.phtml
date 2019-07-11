@@ -1,10 +1,28 @@
 <?php
-require_once (views."template/header.phtml");
+require_once (views."template/theme-header.phtml");
 if(isset($_POST['token'])){
     $user = $_SESSION['id'];
-    $dir = base."uploads/curriculos/";
+    $tmpName = $_FILES['file']['tmp_name'];
+    $dir = base."uploads/";
     $filename = date("dhis").".pdf";
-    echo $filename;
+    if(move_uploaded_file("".$tmpName, $dir.$filename )){
+
+        $query = "INSERT INTO curriculos (usuarioId, file) VALUES ('".$usuario->id."', '".$dir."/".$filename."')";
+        require_once (models.'sql.php');
+        $sql = new sql;
+        $result = $sql->insert($query);
+        if($result){
+            ?>
+            <script type="text/javascript">
+                window.close();
+            </script>
+            <?php
+        }
+    }else{
+        die("<a href='".$dir.$filename."'>Path<a>");
+    }
+
+
 }
 ?>
 
@@ -13,8 +31,14 @@ if(isset($_POST['token'])){
         <h3>Upload de Curriculo</h3>
         <form action="" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="token" value="true">
-            <input type="file" name="file" class="form-control" accept=".pdf" required><br>
-            <button class="btn btn-primary" type="submit"><i class="fa fa-upload"></i>Enviar</button>
+                <div class="file-field">
+                    <div class="btn btn-info btn-sm btn-block float-left">
+                        <input type="file" name="file" class="form-control" accept=".pdf" >
+                    </div>
+                    <div class="file-path-wrapper">
+                    </div>
+                </div>
+            <button class="btn btn-info" type="submit"><i class="fa fa-upload"></i> Enviar</button>
         </form>
     </div>
 </center>
