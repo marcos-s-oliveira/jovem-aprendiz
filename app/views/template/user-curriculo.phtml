@@ -1,0 +1,46 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Marcos
+ * Date: 10/06/2019
+ * Time: 07:36
+ */
+?>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title "><?php echo $usuario->nome;?></h4>
+            <p class="card-category">Curriculo</p>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <button class="btn btn-primary" onclick="popup('<?php echo base;?>Enviar/curriculo')"><i class="fa fa-upload"></i> Enviar</button>
+                <table class="table">
+                    <thead class=" text-primary">
+                    <tr><th>
+                            Arquivo
+                        </th>
+                        <th>
+                            Download
+                        </th>
+
+                    </tr></thead>
+                    <tbody>
+                    <?php
+                    require_once (models."sql.php");
+                    $sql = new sql;
+                    $query = "SELECT * FROM curriculos WHERE usuarioId = '".$usuario->id."'";
+                    $result = $sql->select($query);
+                    while ($row = mysqli_fetch_assoc($result)){
+                        ?>
+                        <tr><td>Curriculo_<?php echo $row['id']."_".$usuario->nome;?></td>
+                        <?php
+                        echo "<td><a href='#' onclick='popup(\"".base."uploads/curriculos/".$row['file']."\")'><i class='fa fa-download'></i></a></td></tr>";
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

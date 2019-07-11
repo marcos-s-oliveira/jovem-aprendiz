@@ -1,0 +1,20 @@
+<?php
+require_once (views."template/header.phtml");
+if(isset($_POST['token'])){
+    $user = $_SESSION['id'];
+    $dir = base."uploads/curriculos/";
+    $filename = date("dhis").".pdf";
+    echo $filename;
+}
+?>
+
+<center>
+    <div class="container">
+        <h3>Upload de Curriculo</h3>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="token" value="true">
+            <input type="file" name="file" class="form-control" accept=".pdf" required><br>
+            <button class="btn btn-primary" type="submit"><i class="fa fa-upload"></i>Enviar</button>
+        </form>
+    </div>
+</center>
