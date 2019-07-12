@@ -28,12 +28,10 @@
                 <a href="#" onclick="Download('<?php echo base;?>uploads/curriculos/sdh2dgj5.pdf', 'Curriculo_modelo_Central_de_vagas.pdf')"><button class="btn btn-primary"><i class="fa fa-download"></i> Modelo de Currículo</button></a>
                 <table class="table">
                     <thead class=" text-primary">
-                    <tr><th>
+                    <tr><th colspan="2">
                             Arquivo
                         </th>
-                        <th>
-                            Download
-                        </th>
+
 
                     </tr></thead>
                     <tbody>
@@ -46,7 +44,8 @@
                         ?>
                         <tr><td>Curriculo_<?php echo $row['id']."_".$usuario->nome;?></td>
                         <?php
-                        echo "<td><a href='#' onclick='popup(\"".base."uploads/curriculos/".$row['file']."\")'><button class='btn btn-primary'><i class='fa fa-file'></i>  Ver meu Currículo</button></a></td></tr>";
+                        echo "<td><a href='#' onclick='popup(\"".base.$row['file']."\")'><button class='btn btn-primary'><i class='fa fa-file'></i>  Ver meu Currículo</button></a>";
+                        echo "<a href='#' onclick='popup(\"".base."Delete/curriculo/".$row['id']."\")'><button class='btn btn-primary'><i class='fa fa-trash'></i></button></a></td></tr>";
                     }
                     ?>
                     </tbody>

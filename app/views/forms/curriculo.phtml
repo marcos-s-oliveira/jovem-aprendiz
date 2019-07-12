@@ -2,12 +2,12 @@
 require_once (views."template/theme-header.phtml");
 if(isset($_POST['token'])){
     $user = $_SESSION['id'];
-    $tmpName = $_FILES['file']['tmp_name'];
-    $dir = base."uploads/";
-    $filename = date("dhis").".pdf";
-    if(move_uploaded_file("".$tmpName, $dir.$filename )){
+    $dir = "uploads/curriculos/";
+    $ext = strtolower(substr($_FILES['curriculo']['name'],-4));
+    $filename = $dir.date("dmHis").$ext;
+    if(move_uploaded_file($_FILES['curriculo']['tmp_name'], $filename )){
 
-        $query = "INSERT INTO curriculos (usuarioId, file) VALUES ('".$usuario->id."', '".$dir."/".$filename."')";
+        $query = "INSERT INTO curriculos (usuarioId, file) VALUES ('".$usuario->id."', '".$filename."')";
         require_once (models.'sql.php');
         $sql = new sql;
         $result = $sql->insert($query);
@@ -19,7 +19,7 @@ if(isset($_POST['token'])){
             <?php
         }
     }else{
-        die("<a href='".$dir.$filename."'>Path<a>");
+        die("<a href='".$filename."'>Path<a>");
     }
 
 
@@ -30,15 +30,15 @@ if(isset($_POST['token'])){
     <div class="container">
         <h3>Upload de Curriculo</h3>
         <form action="" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="token" value="true">
+            <input type="hidden" name="token" value="true" >
                 <div class="file-field">
-                    <div class="btn btn-info btn-sm btn-block float-left">
-                        <input type="file" name="file" class="form-control" accept=".pdf" >
+                    <div class="btn btn-primary btn-sm btn-block float-left">
+                        <input type="file" name="curriculo" class="form-control" accept=".pdf" style="color: #FFF;" >
                     </div>
                     <div class="file-path-wrapper">
                     </div>
                 </div>
-            <button class="btn btn-info" type="submit"><i class="fa fa-upload"></i> Enviar</button>
+            <button class="btn btn-primary" type="submit"><i class="fa fa-upload"></i> Enviar</button>
         </form>
     </div>
 </center>

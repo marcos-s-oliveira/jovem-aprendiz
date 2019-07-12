@@ -9,6 +9,7 @@
 class vaga{
     public $id;
     public $cargo;
+    public $localidade;
     public $nivel;
     public $carga;
     public $vagas;
@@ -29,6 +30,7 @@ class vaga{
         $row = mysqli_fetch_assoc($result);
         $this->id = $row['id'];
         $this->cargo = $row['cargo'];
+        $this->localidade = $row['localidade'];
         $this->nivel = $row['nivel'];
         $this->carga = $row['carga'];
         $this->vagas = $row['vagas'];
@@ -44,30 +46,10 @@ class vaga{
             $detalhe = $this->edital;
         }
         echo "
-        <tr>
-        <td>
-        ".$this->id."
-        </td>
-        <td>
-        ".$this->cargo."
-        </td>
-        <td>
-        ".$this->nivel."
-        </td>
-        <td>
-        ".$this->carga."
-        </td>
-        <td class=\"text-primary\">
-        ".$this->vagas."
-        </td><td>
-            <a href=\"#\" onclick=\"popup('".$detalhe."')\" data-title=\"Saiba Mais\">
-                <i class=\"material-icons\">
-        open_in_new
-                </i>
-            </a>
-            <a href=\"#\" onclick=\"popup('inscrever/vaga/".$this->id."')\" data-title=\"Inscever-se\">
-                <i class=\"material-icons\">
-        how_to_reg
+        <tr><td>".$this->id."</td><td>".$this->cargo."</td><td>".$this->localidade."</td><td>".$this->nivel."
+        </td><td>".$this->carga."</td><td class=\"text-primary\">".$this->vagas."
+        </td><td><a href=\"#\" onclick=\"popup('".$detalhe."')\" data-title=\"Saiba Mais\"><i class=\"material-icons\">open_in_new</i>
+        </a><a href=\"#\" onclick=\"popup('inscrever/vaga/".$this->id."')\" data-title=\"Inscever-se\"><i class=\"material-icons\">how_to_reg
                 </i>
             </a>
         </td>

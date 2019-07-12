@@ -1,0 +1,161 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Marcos
+ * Date: 12/07/2019
+ * Time: 09:56
+ */
+if(isset($_POST['email'])){
+    require_once (models."sql.php");
+    $sql = new sql;
+    $id = $usuario->id;
+    unset($_POST['email']);
+    ?>
+    <script>
+        window.location.replace("../");
+    </script>
+    <?php
+
+}
+?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title">Nova Vaga de Emprego</h4>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Empregador</label>
+                                <input name="nome" type="text" class="form-control" disabled value="<?php echo $usuario->nome;?>">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Localidade</label>
+                                <input name="localidade" type="text" class="form-control" value="<?php echo $usuario->municipio;?>">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                                <label class="label-floating">Nível</label>
+                                <input type="hidden">
+                                <select name="nivel" class="form-control">
+
+                                    <option value="Não Especificado">Selecione...</option>
+                                    <option value="Estudante">Estudante</option>
+                                    <option value="Fundamental">Ensino Fundamental</option>
+                                    <option value="Médio">Ensino Médio</option>
+                                    <option value="Superior">Ensino Superior</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Carga Horária</label>
+                                <input name="carga" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Quantidade de Vagas</label>
+                                <input name="vagas" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Salário Inicial</label>
+                                <input name="salario" id="moeda" type="text" class="form-control">
+                                <?php $moeda = true;?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table><tbody><tr><td></td> <td>
+                            <div class="form-check">
+                            <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" onclick="addrColapse();">
+                            <span class="form-check-sign">
+                            <span class="check"></span></span>
+                            </label>
+                            </div>
+                            </td>
+                                    <td><p></p><label>Endereço de Entrevista Diferente do Endereço Cadastrado</label></td>
+                                </tr></tbody></table>
+                        </div>
+                    </div>
+                    <div class="row" id=""><br></div>
+                    <div id="endereco" style="display: none !important;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Logradouro</label>
+                                <input name="logradouro" type="text" class="form-control" value="<?php echo $usuario->logradouro.", ".$usuario->numero;?>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Bairro</label>
+                                <input name="bairro" type="text" class="form-control"  value="<?php echo $usuario->bairro;?>">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Município</label>
+                                <input name="municipio" type="text" class="form-control"  value="<?php echo $usuario->municipio;?>">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Estado</label>
+                                <input name="uf" type="text" class="form-control"  value="<?php echo $usuario->uf;?>">
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Descrição</label>
+                                <div class="form-group bmd-form-group">
+                                    <label class="bmd-label-floating"> Uma breve descrição sobre a vaga</label>
+                                    <textarea name="sobre" class="form-control" rows="5" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Atualizar meu Perfil</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--div class="col-md-4">
+        <div class="card card-profile">
+            <div class="card-avatar">
+                <a href="#pablo">
+                    <img class="img" src="../assets/img/faces/marc.jpg">
+                </a>
+            </div>
+            <div class="card-body">
+                <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                <h4 class="card-title">Alec Thompson</h4>
+                <p class="card-description">
+                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                </p>
+                <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+            </div>
+        </div>
+    </div>
+    </div-->
