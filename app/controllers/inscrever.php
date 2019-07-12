@@ -21,12 +21,12 @@ class inscrever{
             $gera->comprovante(null);
 
         }elseif($result == 1062){
-            echo "
+            ?>
             <script type='text/javascript'>
-            alert('Você já se inscreveu neste processo!');
+            alert("Você já se inscreveu para esta vaga.\nAguarde o contato do empregador.");
             window.close();
             </script>
-            ";
+            <?php
         }
     }
 

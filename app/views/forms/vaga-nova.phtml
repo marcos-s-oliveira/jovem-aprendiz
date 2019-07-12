@@ -5,19 +5,78 @@
  * Date: 12/07/2019
  * Time: 09:56
  */
-if(isset($_POST['email'])){
-    require_once (models."sql.php");
-    $sql = new sql;
-    $id = $usuario->id;
-    unset($_POST['email']);
+if(isset($_POST['token'])){
+
+    if($_SESSION['tentativaUpload'] >= 3){
+        ?>
+        <script>
+            alert('Tentativas excedidas, Entre em contato com o suporte');
+            window.location.replace("../");
+        </script>
+        <?php
+    }
     ?>
     <script>
-        window.location.replace("../");
+        console.log("token recebido");
     </script>
     <?php
+    if($_FILES['edital']['name'] !=""){
+        die("passou".$_FILES['edital']['name']);
+        $fileName = "uploads/editais/".date("dmyHis").".pdf";
+        if(!move_uploaded_file($_FILES['edital']['tmp_name'], $fileName)){
+         ?>
+            <script>
+                alert('Falha no upload do Arquivo<?php echo ". tentativas: ".$_SESSION['tentativaUpload'];?>');
+                window.location.reload();
+            </script>
+            <?php
+            $_SESSION['tentativaUpload'] = $_SESSION['tentativaUpload'] + 1;
+        }
+    }
+    unset($_POST['token']);
+    require_once (models."sql.php");
+    $sql = new sql;
+     $cargo = addslashes($_POST['cargo']);
+     $localidade = addslashes($_POST['localidade']);
+     $nivel = addslashes($_POST['nivel']);
+     $carga = addslashes($_POST['carga']);
+     $entrevistasI = addslashes($_POST['entrevistasI']);
+     $entrevistasF = addslashes($_POST['entrevistasF']);
+     $vagas = addslashes($_POST['vagas']);
+     $salario = addslashes($_POST['salario']);
+     $logradouro = addslashes($_POST['logradouro']);
+     $bairro = addslashes($_POST['bairro']);
+     $municipio = addslashes($_POST['municipio']);
+     $uf = addslashes($_POST['uf']);
+     $sobre = addslashes($_POST['sobre']);
+     $endereco = $logradouro." - ".$municipio."-".$uf;
+     $id = $usuario->id;
+    $query = "INSERT INTO vagas(cargo, nivel, carga, vagas, inicio, fim, entrevistaInicio, entrevistaFim, edital, empregadorId, ativo, localidade, endereco)
+              VALUES ('$cargo,', '$nivel', '$carga', '$vagas', null, null, '$entrevistasI', '$entrevistasF', '$fileName', '$id', 1, '$municipio', '$endereco')";
 
+    if($_SESSION['tentativaUpload'] == 0){
+        $result = $sql->insert($query);
+    }
+    if(!$result){
+        ?>
+        <script>
+            alert('Erro de SQL, Entre em contato com o suporte');
+            window.location.replace("../");
+        </script>
+        <?php
+}else{
+        ?>
+        <script>
+            window.location.replace("../");
+        </script>
+        <?php
+    }
+}else{
+    $_SESSION['tentativaUpload'] = 0;
 }
+
 ?>
+
 <div class="row">
     <div class="col-md-12">
         <div class="card">
@@ -25,7 +84,17 @@ if(isset($_POST['email'])){
                 <h4 class="card-title">Nova Vaga de Emprego</h4>
             </div>
             <div class="card-body">
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="token" value="B37i0*(">
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group bmd-form-group">
+                                <label class="bmd-label-floating">Cargo/Função</label>
+                                <input name="cargo" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group bmd-form-group">
@@ -58,29 +127,44 @@ if(isset($_POST['email'])){
                         <div class="col-md-4">
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Carga Horária</label>
-                                <input name="carga" type="number" class="form-control">
+                                <input name="carga" type="number" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Quantidade de Vagas</label>
-                                <input name="vagas" type="number" class="form-control">
+                                <input name="vagas" type="number" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group bmd-form-group">
                                 <label class="bmd-label-floating">Salário Inicial</label>
-                                <input name="salario" id="moeda" type="text" class="form-control">
+                                <input name="salario" id="moeda" type="text" class="form-control" required>
                                 <?php $moeda = true;?>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <table><tbody><tr><td></td> <td>
+
+                    <div class="col-md-6">
+                        <div class="form-group bmd-form-group">
+                            <label class="bmd-label-floating">Início das Entrevistas</label>
+                            <input type="date" name="entrevistasI" id="entrevistasI" class="form-control" value="<?php echo date("Y-m-d");?>">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group bmd-form-group">
+                            <label class="bmd-label-floating">Fim das Entrevistas</label>
+                            <input type="date" name="entrevistasF" id="entrevistasF" class="form-control" value="<?php echo date("Y-m-d");?>">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table><tbody><tr><td>
                             <div class="form-check">
                             <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value="" onclick="addrColapse();">
+                            <input class="form-check-input" type="checkbox" id="checkBox" value="true" onclick="addrColapse(this.value);">
                             <span class="form-check-sign">
                             <span class="check"></span></span>
                             </label>
@@ -90,7 +174,7 @@ if(isset($_POST['email'])){
                                 </tr></tbody></table>
                         </div>
                     </div>
-                    <div class="row" id=""><br></div>
+                    <div class="row"><br></div>
                     <div id="endereco" style="display: none !important;">
                     <div class="row">
                         <div class="col-md-12">
@@ -125,16 +209,44 @@ if(isset($_POST['email'])){
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Descrição</label>
-                                <div class="form-group bmd-form-group">
-                                    <label class="bmd-label-floating"> Uma breve descrição sobre a vaga</label>
-                                    <textarea name="sobre" class="form-control" rows="5" ></textarea>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="checkBoxEdital" value="true" onclick="editalColapse(this.value);">
+                                        <span class="form-check-sign">
+                            <span class="check"></span></span>
+                                    Enviar um Edital</label>
                                 </div>
-                            </div>
+                                <div id="descri">
+                                    <label>Descrição</label>
+                                    <div class="form-group bmd-form-group">
+                                        <label class="bmd-label-floating"> Uma breve descrição sobre a vaga</label>
+                                        <textarea name="sobre" class="form-control" rows="5" ></textarea>
+                                    </div>
+                                </div>
+                                <div class="row" id="inputEdital" style="display: none">
+                                    <div class="col-md-6">
+                                        <div  class="form-group">
+                                            <label>Edital</label>
+                                            <div class="file-field">
+                                                <div class="btn btn-primary btn-sm btn-block float-left">Escolha um arquivo
+                                                    <input type="file" name="edital" class="form-control" accept=".pdf" style="color: #FFF;" >
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Atualizar meu Perfil</button>
-                    <div class="clearfix"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Salvar Vaga</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

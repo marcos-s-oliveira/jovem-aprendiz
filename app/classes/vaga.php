@@ -40,7 +40,7 @@ class vaga{
         $this->empregador = $row['empregadorId'];
     }
     public function mostraLinha(){
-        if(!isset($this->edital)){
+        if($this->edital == null){
             $detalhe = "detalhe/vaga/".$this->id;
         }else{
             $detalhe = $this->edital;
@@ -54,5 +54,22 @@ class vaga{
             </a>
         </td>
     </tr>";
+    }
+    public function mostraEmpresa(){
+            if($this->edital == null){
+                $detalhe = "detalhe/vaga/".$this->id;
+            }else{
+                $detalhe = $this->edital;
+            }
+            echo "
+        <tr><td>".$this->id."</td><td>".$this->cargo."</td><td>".$this->localidade."</td><td>".$this->nivel."
+        </td><td>".$this->carga."</td><td class=\"text-primary\">".$this->vagas."
+        </td><td><a href=\"#\" onclick=\"popup('".$detalhe."')\" data-title=\"Saiba Mais\"><i class=\"material-icons\">open_in_new</i>
+        </a><a href=\"#\" onclick=\"popup('inscrever/vaga/".$this->id."')\" data-title=\"Inscever-se\"><i class=\"material-icons\">how_to_reg
+                </i>
+            </a>
+        </td>
+    </tr>";
+
     }
 }

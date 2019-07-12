@@ -378,8 +378,28 @@
             document.getElementById(id).value='';
         }
     }
-    function addrColapse() {
-        document.getElementById("endereco").style = "display: block !important;";
+    function addrColapse(value) {
+        if(value == "true"){
+            document.getElementById("checkBox").value = "false";
+            //document.getElementById("endereco-v").style = "display: none !important;";
+            document.getElementById("endereco").style = "display: block !important;";
+        }else if(value == "false"){
+            document.getElementById("checkBox").value = "true";
+            document.getElementById("endereco").style = "display: none !important;";
+
+        }
+    }
+    function editalColapse(value) {
+        if(value == "true"){
+            document.getElementById("checkBoxEdital").value = "false";
+            document.getElementById("descri").style = "display: none !important;";
+            document.getElementById("inputEdital").style = "display: block !important;";
+        }else if(value == "false"){
+            document.getElementById("checkBoxEdital").value = "true";
+            document.getElementById("descri").style = "display: block !important;";
+            document.getElementById("inputEdital").style = "display: none !important;";
+
+        }
     }
 </script>
 </body>
